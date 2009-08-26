@@ -30,9 +30,12 @@ namespace F3\Faker;
  * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License', version 3 or later
  */
-
 class Phone extends Faker {
 
+	/**
+	 * Phone number formats
+	 * @var array
+	 */
 	static protected $numberFormats = array(
 		'###-###-####',
 		'(###)###-####',
@@ -56,6 +59,12 @@ class Phone extends Faker {
 		'###.###.#### x#####'
 	);
 
+	/**
+	 * Returns a fake phone number.
+	 *
+	 * @return string
+	 * @author Karsten Dambekalns <karsten@typo3.org>
+	 */
 	static public function number() {
 		shuffle(self::$numberFormats);
 		return self::numerify(current(self::$numberFormats));

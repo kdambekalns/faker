@@ -30,9 +30,14 @@ namespace F3\Faker;
  * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License', version 3 or later
  */
-
 class Name extends Faker {
 
+	/**
+	 * Return a fake name.
+	 *
+	 * @return string
+	 * @author Karsten Dambekalns <karsten@typo3.org>
+	 */
 	static public function fullName() {
 		$fullName = '';
 		$format = self::$formats[array_rand(self::$formats)];
@@ -44,22 +49,50 @@ class Name extends Faker {
 		return trim($fullName);
 	}
 
+	/**
+	 * Return a fake first name.
+	 *
+	 * @return string
+	 * @author Karsten Dambekalns <karsten@typo3.org>
+	 */
 	static public function firstName() {
 		return self::$firstNames[array_rand(self::$firstNames)];
 	}
 
+	/**
+	 * Return a fake last name.
+	 *
+	 * @return string
+	 * @author Karsten Dambekalns <karsten@typo3.org>
+	 */
 	static public function lastName() {
 		return self::$lastNames[array_rand(self::$lastNames)];
 	}
 
+	/**
+	 * Return a fake prefix.
+	 *
+	 * @return string
+	 * @author Karsten Dambekalns <karsten@typo3.org>
+	 */
 	static public function prefix() {
 		return self::$prefixes[array_rand(self::$prefixes)];
 	}
 
+	/**
+	 * Return a fake suffix.
+	 *
+	 * @return string
+	 * @author Karsten Dambekalns <karsten@typo3.org>
+	 */
 	static public function suffix() {
 		return self::$suffixes[array_rand(self::$suffixes)];
 	}
 
+	/**
+	 * Name formats (duplication intended!).
+	 * @var array
+	 */
 	static protected $formats = array(
 		array('prefix', 'firstName', 'lastName'),
 		array('firstName', 'lastName', 'suffix'),
@@ -73,10 +106,22 @@ class Name extends Faker {
 		array('firstName', 'lastName'),
 	);
 
+	/**
+	 * Name prefixes.
+	 * @var array
+	 */
 	static protected $prefixes = array('Mr.', 'Mrs.', 'Ms.', 'Miss', 'Dr.');
 
+	/**
+	 * Nae suffixes.
+	 * @var array
+	 */
 	static protected $suffixes = array('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'DDS', 'PhD', 'DVM');
 
+	/**
+	 * A bunch of first names.
+	 * @var array
+	 */
 	static protected $firstNames = array(
 		'Aaliyah',
 		'Aaron',
@@ -3087,6 +3132,10 @@ class Name extends Faker {
 		'Zula'
 	);
 
+	/**
+	 * A bunch of last names.
+	 * @var array
+	 */
 	static protected $lastNames = array(
 		'Abbott',
 		'Abernathy',

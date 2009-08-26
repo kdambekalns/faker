@@ -28,21 +28,16 @@ namespace F3\Faker\Controller;
  * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-
 class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
 
 	/**
-	 * Index action
+	 * Generate and assign some fake data.
 	 *
 	 * @return void
+	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	public function indexAction() {
 		$this->view->assign('names', array(
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
 				\F3\Faker\Name::fullName(),
 				\F3\Faker\Name::fullName(),
 				\F3\Faker\Name::fullName(),
@@ -52,16 +47,15 @@ class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
 		);
 		$this->view->assign('emails', array(
 				\F3\Faker\Internet::email(),
-				\F3\Faker\Internet::freeEmail(),
+				\F3\Faker\Internet::email(),
+				\F3\Faker\Internet::email(),
+				\F3\Faker\Internet::email(),
 				\F3\Faker\Internet::email(),
 				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::email(),
 				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::email(),
 				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::email(),
 				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::email()
+				\F3\Faker\Internet::freeEmail()
 			)
 		);
 		$this->view->assign('domains', array(
@@ -84,14 +78,14 @@ class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
 		$this->view->assign('addresses', array(
 				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
 				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usStateCode(),
-				\F3\Faker\Address::streetAddress(TRUE) . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCounty(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCountry(),
 				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
 				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usStateCode(),
 				\F3\Faker\Address::streetAddress(TRUE) . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
+				\F3\Faker\Address::streetAddress(TRUE) . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
 				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCounty(),
 				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCountry(),
+				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCounty(),
+				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCountry()
 			)
 		);
 		$this->view->assign('phoneNumbers', array(
@@ -99,14 +93,26 @@ class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
 				\F3\Faker\Phone::number(),
 				\F3\Faker\Phone::number(),
 				\F3\Faker\Phone::number(),
-				\F3\Faker\Phone::number(),
+				\F3\Faker\Phone::number()
 			)
 		);
 		$this->view->assign('lorem', array(
 				\F3\Faker\Lorem::sentence(),
-				\F3\Faker\Lorem::paragraph(),
 				\F3\Faker\Lorem::sentence(),
 				\F3\Faker\Lorem::paragraph(),
+				\F3\Faker\Lorem::paragraph()
+			)
+		);
+		$this->view->assign('catchphrases', array(
+				\F3\Faker\Company::catchPhrase(),
+				\F3\Faker\Company::catchPhrase(),
+				\F3\Faker\Company::catchPhrase(),
+			)
+		);
+		$this->view->assign('bss', array(
+				\F3\Faker\Company::bs(),
+				\F3\Faker\Company::bs(),
+				\F3\Faker\Company::bs(),
 			)
 		);
 	}

@@ -46,7 +46,11 @@ class Lorem extends Faker {
 	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function words($count = 3) {
-		return array_intersect_key(self::$words, array_flip(array_rand(self::$words, $count)));
+		if ($count === 1) {
+			return self::$words[array_rand(self::$words, $count)];
+		} else {
+			return array_intersect_key(self::$words, array_flip(array_rand(self::$words, $count)));
+		}
 	}
 
 	/**

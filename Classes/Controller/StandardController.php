@@ -37,6 +37,13 @@ class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
 	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	public function indexAction() {
+		$this->view->assign('dates', array(
+				\F3\Faker\Date::random(),
+				\F3\Faker\Date::random('+ 1 hour'),
+				\F3\Faker\Date::random('+ 10 minutes', '+ 6 weeks'),
+				\F3\Faker\Date::random('+ 10 minutes', '+ 6 weeks', new \DateTime('- 1 year')),
+			)
+		);
 		$this->view->assign('names', array(
 				\F3\Faker\Name::fullName(),
 				\F3\Faker\Name::fullName(),

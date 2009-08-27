@@ -10,6 +10,12 @@
 	</head>
 	<body>
 		<h1>Some fake data from Faker...</h1>
+		<p>Dates:</p>
+		<ul>
+			<f:for each="{dates}" as="date">
+			<li><f:format.date format="d.m.Y - H:i:s">{date}</f:format.date></li>
+			</f:for>
+		</ul>
 		<p>Names:</p>
 		<ul>
 			<f:for each="{names}" as="name">

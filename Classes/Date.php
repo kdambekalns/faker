@@ -27,7 +27,6 @@ namespace F3\Faker;
  *
  * The Faker package is based on http://faker.rubyforge.org/
  *
- * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License', version 3 or later
  */
 class Date extends Faker {

@@ -25,7 +25,6 @@ namespace F3\Faker\Controller;
 /**
  * Standard controller for the Faker package
  *
- * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
 class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {

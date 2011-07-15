@@ -1,5 +1,5 @@
 <?php
-namespace F3\Faker;
+namespace TYPO3\Faker;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Faker".                      *
@@ -35,9 +35,9 @@ class Company extends Faker {
 	 * @var array
 	 */
 	static protected $formats = array(
-		array('format' => '%s %s', 'parts' => array(array('F3\Faker\Name','lastName'), array('F3\Faker\Company', 'suffix'))),
-		array('format' => '%s-%s', 'parts' => array(array('F3\Faker\Name','lastName'), array('F3\Faker\Name','lastName'))),
-		array('format' => '%s, %s and %s', 'parts' => array(array('F3\Faker\Name','lastName'), array('F3\Faker\Name','lastName'), array('F3\Faker\Name','lastName')))
+		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Company', 'suffix'))),
+		array('format' => '%s-%s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Name','lastName'))),
+		array('format' => '%s, %s and %s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Name','lastName')))
 	);
 
 	/**

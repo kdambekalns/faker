@@ -1,5 +1,5 @@
 <?php
-namespace F3\Faker;
+namespace TYPO3\Faker;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Faker".                      *
@@ -65,10 +65,10 @@ class Address extends Faker {
 	 * @var array
 	 */
 	static protected $cityFormats = array(
-		array('format' => '%s %s%s', 'parts' => array(array('F3\Faker\Address','cityPrefix'), array('F3\Faker\Name','firstName'), array('F3\Faker\Address','citySuffix'))),
-		array('format' => '%s %s', 'parts' => array(array('F3\Faker\Address','cityPrefix'), array('F3\Faker\Name','firstName'))),
-		array('format' => '%s%s', 'parts' => array(array('F3\Faker\Name','firstName'), array('F3\Faker\Address','citySuffix'))),
-		array('format' => '%s%s', 'parts' => array(array('F3\Faker\Name','lastName'), array('F3\Faker\Address','citySuffix')))
+		array('format' => '%s %s%s', 'parts' => array(array('TYPO3\Faker\Address','cityPrefix'), array('TYPO3\Faker\Name','firstName'), array('TYPO3\Faker\Address','citySuffix'))),
+		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Address','cityPrefix'), array('TYPO3\Faker\Name','firstName'))),
+		array('format' => '%s%s', 'parts' => array(array('TYPO3\Faker\Name','firstName'), array('TYPO3\Faker\Address','citySuffix'))),
+		array('format' => '%s%s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Address','citySuffix')))
 	);
 
 	/**
@@ -82,8 +82,8 @@ class Address extends Faker {
 	 * @var array
 	 */
 	static protected $streetNameFormats = array(
-		array('format' => '%s %s', 'parts' => array(array('F3\Faker\Name','lastName'), array('F3\Faker\Address','streetSuffix'))),
-		array('format' => '%s %s', 'parts' => array(array('F3\Faker\Name','firstName'), array('F3\Faker\Address','streetSuffix')))
+		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Address','streetSuffix'))),
+		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name','firstName'), array('TYPO3\Faker\Address','streetSuffix')))
 	);
 
 	/**

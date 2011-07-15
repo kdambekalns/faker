@@ -1,5 +1,5 @@
 <?php
-namespace F3\Faker;
+namespace TYPO3\Faker;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Faker".                      *
@@ -74,9 +74,9 @@ class Internet extends Faker {
 	static public function userName($name = NULL) {
 		if ($name === NULL) {
 			if (rand(1, 10) > 5) {
-				$name = \F3\Faker\Name::firstName() . ' ' . \F3\Faker\Name::lastName();
+				$name = \TYPO3\Faker\Name::firstName() . ' ' . \TYPO3\Faker\Name::lastName();
 			} else {
-				$name = \F3\Faker\Name::firstName();
+				$name = \TYPO3\Faker\Name::firstName();
 			}
 		}
 
@@ -106,7 +106,7 @@ class Internet extends Faker {
 	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static protected function domainWord() {
-		$words = explode(' ', \F3\Faker\Company::name());
+		$words = explode(' ', \TYPO3\Faker\Company::name());
 		shuffle($words);
 		return strtolower(preg_replace('/\W/', '', current($words)));
 	}

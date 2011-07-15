@@ -1,5 +1,5 @@
 <?php
-namespace F3\Faker;
+namespace TYPO3\Faker;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Faker".                      *
@@ -21,7 +21,7 @@ namespace F3\Faker;
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
 
-use \F3\FLOW3\Package\Package as BasePackage;
+use \TYPO3\FLOW3\Package\Package as BasePackage;
 
 /**
  * The Faker Package

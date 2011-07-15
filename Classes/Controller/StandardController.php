@@ -1,5 +1,5 @@
 <?php
-namespace F3\Faker\Controller;
+namespace TYPO3\Faker\Controller;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Faker".                      *
@@ -26,7 +26,7 @@ namespace F3\Faker\Controller;
  *
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
+class StandardController extends \TYPO3\FLOW3\MVC\Controller\ActionController {
 
 	/**
 	 * Generate and assign some fake data.
@@ -36,88 +36,88 @@ class StandardController extends \F3\FLOW3\MVC\Controller\ActionController {
 	 */
 	public function indexAction() {
 		$this->view->assign('dates', array(
-				\F3\Faker\Date::random(),
-				\F3\Faker\Date::random('+ 1 hour'),
-				\F3\Faker\Date::random('+ 10 minutes', '+ 6 weeks'),
-				\F3\Faker\Date::random('+ 10 minutes', '+ 6 weeks', new \DateTime('- 1 year')),
+				\TYPO3\Faker\Date::random(),
+				\TYPO3\Faker\Date::random('+ 1 hour'),
+				\TYPO3\Faker\Date::random('+ 10 minutes', '+ 6 weeks'),
+				\TYPO3\Faker\Date::random('+ 10 minutes', '+ 6 weeks', new \DateTime('- 1 year')),
 			)
 		);
 		$this->view->assign('names', array(
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName(),
-				\F3\Faker\Name::fullName()
+				\TYPO3\Faker\Name::fullName(),
+				\TYPO3\Faker\Name::fullName(),
+				\TYPO3\Faker\Name::fullName(),
+				\TYPO3\Faker\Name::fullName(),
+				\TYPO3\Faker\Name::fullName()
 			)
 		);
 		$this->view->assign('emails', array(
-				\F3\Faker\Internet::email(),
-				\F3\Faker\Internet::email(),
-				\F3\Faker\Internet::email(),
-				\F3\Faker\Internet::email(),
-				\F3\Faker\Internet::email(),
-				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::freeEmail(),
-				\F3\Faker\Internet::freeEmail()
+				\TYPO3\Faker\Internet::email(),
+				\TYPO3\Faker\Internet::email(),
+				\TYPO3\Faker\Internet::email(),
+				\TYPO3\Faker\Internet::email(),
+				\TYPO3\Faker\Internet::email(),
+				\TYPO3\Faker\Internet::freeEmail(),
+				\TYPO3\Faker\Internet::freeEmail(),
+				\TYPO3\Faker\Internet::freeEmail(),
+				\TYPO3\Faker\Internet::freeEmail(),
+				\TYPO3\Faker\Internet::freeEmail()
 			)
 		);
 		$this->view->assign('domains', array(
-				\F3\Faker\Internet::domainName(),
-				\F3\Faker\Internet::domainName(),
-				\F3\Faker\Internet::domainName(),
-				\F3\Faker\Internet::domainName(),
-				\F3\Faker\Internet::domainName()
+				\TYPO3\Faker\Internet::domainName(),
+				\TYPO3\Faker\Internet::domainName(),
+				\TYPO3\Faker\Internet::domainName(),
+				\TYPO3\Faker\Internet::domainName(),
+				\TYPO3\Faker\Internet::domainName()
 			)
 		);
 		$this->view->assign('companies', array(
-				\F3\Faker\Company::name(),
-				\F3\Faker\Company::name(),
-				\F3\Faker\Company::name(),
-				\F3\Faker\Company::name(),
-				\F3\Faker\Company::name(),
-				\F3\Faker\Company::name()
+				\TYPO3\Faker\Company::name(),
+				\TYPO3\Faker\Company::name(),
+				\TYPO3\Faker\Company::name(),
+				\TYPO3\Faker\Company::name(),
+				\TYPO3\Faker\Company::name(),
+				\TYPO3\Faker\Company::name()
 			)
 		);
 		$this->view->assign('addresses', array(
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usStateCode(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usStateCode(),
-				\F3\Faker\Address::streetAddress(TRUE) . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
-				\F3\Faker\Address::streetAddress(TRUE) . ', ' . \F3\Faker\Address::zipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::usState(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCounty(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCountry(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCounty(),
-				\F3\Faker\Address::streetAddress() . ', ' . \F3\Faker\Address::ukZipCode() . ' ' . \F3\Faker\Address::city() . ', ' . \F3\Faker\Address::ukCountry()
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::zipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::usState(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::zipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::usStateCode(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::zipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::usState(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::zipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::usStateCode(),
+				\TYPO3\Faker\Address::streetAddress(TRUE) . ', ' . \TYPO3\Faker\Address::zipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::usState(),
+				\TYPO3\Faker\Address::streetAddress(TRUE) . ', ' . \TYPO3\Faker\Address::zipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::usState(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::ukZipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::ukCounty(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::ukZipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::ukCountry(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::ukZipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::ukCounty(),
+				\TYPO3\Faker\Address::streetAddress() . ', ' . \TYPO3\Faker\Address::ukZipCode() . ' ' . \TYPO3\Faker\Address::city() . ', ' . \TYPO3\Faker\Address::ukCountry()
 			)
 		);
 		$this->view->assign('phoneNumbers', array(
-				\F3\Faker\Phone::number(),
-				\F3\Faker\Phone::number(),
-				\F3\Faker\Phone::number(),
-				\F3\Faker\Phone::number(),
-				\F3\Faker\Phone::number()
+				\TYPO3\Faker\Phone::number(),
+				\TYPO3\Faker\Phone::number(),
+				\TYPO3\Faker\Phone::number(),
+				\TYPO3\Faker\Phone::number(),
+				\TYPO3\Faker\Phone::number()
 			)
 		);
 		$this->view->assign('lorem', array(
-				\F3\Faker\Lorem::sentence(),
-				\F3\Faker\Lorem::sentence(),
-				\F3\Faker\Lorem::paragraph(),
-				\F3\Faker\Lorem::paragraph()
+				\TYPO3\Faker\Lorem::sentence(),
+				\TYPO3\Faker\Lorem::sentence(),
+				\TYPO3\Faker\Lorem::paragraph(),
+				\TYPO3\Faker\Lorem::paragraph()
 			)
 		);
 		$this->view->assign('catchphrases', array(
-				\F3\Faker\Company::catchPhrase(),
-				\F3\Faker\Company::catchPhrase(),
-				\F3\Faker\Company::catchPhrase(),
+				\TYPO3\Faker\Company::catchPhrase(),
+				\TYPO3\Faker\Company::catchPhrase(),
+				\TYPO3\Faker\Company::catchPhrase(),
 			)
 		);
 		$this->view->assign('bss', array(
-				\F3\Faker\Company::bs(),
-				\F3\Faker\Company::bs(),
-				\F3\Faker\Company::bs(),
+				\TYPO3\Faker\Company::bs(),
+				\TYPO3\Faker\Company::bs(),
+				\TYPO3\Faker\Company::bs(),
 			)
 		);
 	}

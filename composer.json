@@ -1,0 +1,10 @@
+{
+	"name":"typo3/faker",
+	"type":"typo3-flow-package",
+	"license": "GPL-3.0+",
+	"autoload":{
+		"psr-0":{
+			"TYPO3\\Faker":"Classes"
+		}
+	}
+}

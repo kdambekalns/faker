@@ -29,7 +29,7 @@ class Date extends Faker {
 	 * @param mixed $base the base date to randomize around
 	 * @return \DateTime
 	 * @author Karsten Dambekalns <karsten@typo3.org>
-	 * @throws \IllegalArgumentException
+	 * @throws \InvalidArgumentException
 	 */
 	static public function random($before = '- 1 week', $after = '+ 1 week', $base = NULL) {
 		if ($base === NULL) {
@@ -42,7 +42,7 @@ class Date extends Faker {
 		} elseif ($base instanceof \DateTime) {
 			$baseDateTime = $base;
 		} else {
-			throw new \IllegalArgumentException('$base was neither NULL, integer, string, DateTime nor NULL. Duh!', 1251365710);
+			throw new \InvalidArgumentException('$base was neither NULL, integer, string, DateTime nor NULL. Duh!', 1251365710);
 		}
 
 		$startTimeStamp = strtotime($before, $baseDateTime->getTimeStamp());

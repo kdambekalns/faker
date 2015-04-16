@@ -62,9 +62,9 @@ class Internet extends Faker {
 	static public function userName($name = NULL) {
 		if ($name === NULL) {
 			if (rand(1, 10) > 5) {
-				$name = \TYPO3\Faker\Name::firstName() . ' ' . \TYPO3\Faker\Name::lastName();
+				$name = Name::firstName() . ' ' . Name::lastName();
 			} else {
-				$name = \TYPO3\Faker\Name::firstName();
+				$name = Name::firstName();
 			}
 		}
 
@@ -94,7 +94,7 @@ class Internet extends Faker {
 	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static protected function domainWord() {
-		$words = explode(' ', \TYPO3\Faker\Company::name());
+		$words = explode(' ', Company::name());
 		shuffle($words);
 		return strtolower(preg_replace('/\W/', '', current($words)));
 	}

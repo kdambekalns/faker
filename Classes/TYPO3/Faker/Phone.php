@@ -20,6 +20,7 @@ class Phone extends Faker {
 
 	/**
 	 * Phone number formats
+	 *
 	 * @var array
 	 */
 	static protected $numberFormats = array(
@@ -49,11 +50,10 @@ class Phone extends Faker {
 	 * Returns a fake phone number.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function number() {
 		shuffle(self::$numberFormats);
+
 		return self::numerify(current(self::$numberFormats));
 	}
-
 }

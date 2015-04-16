@@ -28,7 +28,6 @@ class Date extends Faker {
 	 * @param string $after a relative date
 	 * @param mixed $base the base date to randomize around
 	 * @return \DateTime
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 * @throws \InvalidArgumentException
 	 */
 	static public function random($before = '- 1 week', $after = '+ 1 week', $base = NULL) {
@@ -50,7 +49,7 @@ class Date extends Faker {
 
 		$result = new \DateTime();
 		$result->setTimeStamp(rand($startTimeStamp, $endTimeStamp));
+
 		return $result;
 	}
-
 }

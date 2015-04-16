@@ -22,7 +22,6 @@ class Name extends Faker {
 	 * Return a fake name.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function fullName() {
 		$fullName = '';
@@ -39,7 +38,6 @@ class Name extends Faker {
 	 * Return a fake first name.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function firstName() {
 		return self::$firstNames[array_rand(self::$firstNames)];
@@ -49,7 +47,6 @@ class Name extends Faker {
 	 * Return a fake last name.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function lastName() {
 		return self::$lastNames[array_rand(self::$lastNames)];
@@ -59,7 +56,6 @@ class Name extends Faker {
 	 * Return a fake prefix.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function prefix() {
 		return self::$prefixes[array_rand(self::$prefixes)];
@@ -69,7 +65,6 @@ class Name extends Faker {
 	 * Return a fake suffix.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function suffix() {
 		return self::$suffixes[array_rand(self::$suffixes)];
@@ -77,6 +72,7 @@ class Name extends Faker {
 
 	/**
 	 * Name formats (duplication intended!).
+	 *
 	 * @var array
 	 */
 	static protected $formats = array(
@@ -94,18 +90,21 @@ class Name extends Faker {
 
 	/**
 	 * Name prefixes.
+	 *
 	 * @var array
 	 */
 	static protected $prefixes = array('Mr.', 'Mrs.', 'Ms.', 'Miss', 'Dr.');
 
 	/**
 	 * Nae suffixes.
+	 *
 	 * @var array
 	 */
 	static protected $suffixes = array('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'DDS', 'PhD', 'DVM');
 
 	/**
 	 * A bunch of first names.
+	 *
 	 * @var array
 	 */
 	static protected $firstNames = array(
@@ -3120,6 +3119,7 @@ class Name extends Faker {
 
 	/**
 	 * A bunch of last names.
+	 *
 	 * @var array
 	 */
 	static protected $lastNames = array(

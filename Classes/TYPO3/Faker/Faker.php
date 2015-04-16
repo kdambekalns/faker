@@ -23,7 +23,6 @@ class Faker {
 	 *
 	 * @param string $string
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function numerify($string) {
 		return preg_replace('/#/e', 'rand(0,9)', $string);
@@ -34,7 +33,6 @@ class Faker {
 	 *
 	 * @param string $string
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function letterify($string) {
 		return preg_replace('/\?/e', 'chr(rand(97,122))', $string);
@@ -45,10 +43,8 @@ class Faker {
 	 *
 	 * @param string $string
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function bothify($string) {
 		return self::letterify(self::numerify($string));
 	}
-
 }

@@ -20,16 +20,18 @@ class Company extends Faker {
 
 	/**
 	 * Some company name formats.
+	 *
 	 * @var array
 	 */
 	static protected $formats = array(
-		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Company', 'suffix'))),
-		array('format' => '%s-%s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Name','lastName'))),
-		array('format' => '%s, %s and %s', 'parts' => array(array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Name','lastName'), array('TYPO3\Faker\Name','lastName')))
+		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Company', 'suffix'))),
+		array('format' => '%s-%s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Name', 'lastName'))),
+		array('format' => '%s, %s and %s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Name', 'lastName')))
 	);
 
 	/**
 	 * Some company name suffixes.
+	 *
 	 * @var array
 	 */
 	static protected $suffixes = array(
@@ -41,6 +43,7 @@ class Company extends Faker {
 
 	/**
 	 * Some catch phrase parts, wordlist from http://www.1728.com/buzzword.htm
+	 *
 	 * @var array
 	 */
 	static protected $catchPhraseParts = array(
@@ -51,6 +54,7 @@ class Company extends Faker {
 
 	/**
 	 * Some bs phrase parts, wordlist from http://dack.com/web/bullshit.html
+	 *
 	 * @var array
 	 */
 	static protected $bsParts = array(
@@ -63,7 +67,6 @@ class Company extends Faker {
 	 * Return a fake company name.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function name() {
 		$format = self::$formats[array_rand(self::$formats)];
@@ -80,7 +83,6 @@ class Company extends Faker {
 	 * Return a fake company name suffix.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static protected function suffix() {
 		return self::$suffixes[array_rand(self::$suffixes)];
@@ -90,7 +92,6 @@ class Company extends Faker {
 	 * Generate a buzzword-laden catch phrase.
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function catchPhrase() {
 		return
@@ -103,7 +104,6 @@ class Company extends Faker {
 	 * When a straight answer won't do, BS to the rescue!
 	 *
 	 * @return string
-	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function bs() {
 		return
@@ -111,5 +111,4 @@ class Company extends Faker {
 			self::$bsParts[1][array_rand(self::$bsParts[1])] . ' ' .
 			self::$bsParts[2][array_rand(self::$bsParts[2])];
 	}
-
 }

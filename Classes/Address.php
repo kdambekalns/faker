@@ -1,15 +1,12 @@
 <?php
-namespace TYPO3\Faker;
+namespace KDambekalns\Faker;
 
 /*                                                                        *
  * This script belongs to the Flow package "Faker".                       *
- *                                                                        *
- * It is free software; you can redistribute it and/or modify it under    *
- * the terms of the GNU Lesser General Public License, either version 3   *
- * of the License, or (at your option) any later version.                 *
- *                                                                        *
- * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
+
+// define aliae for the legacy vendor namespace
+class_alias('KDambekalns\\Faker\\Address', 'TYPO3\\Faker\\Address');
 
 /**
  * Address class for the Faker package
@@ -59,10 +56,10 @@ class Address extends Faker {
 	 * @var array
 	 */
 	static protected $cityFormats = array(
-		array('format' => '%s %s%s', 'parts' => array(array('TYPO3\Faker\Address', 'cityPrefix'), array('TYPO3\Faker\Name', 'firstName'), array('TYPO3\Faker\Address', 'citySuffix'))),
-		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Address', 'cityPrefix'), array('TYPO3\Faker\Name', 'firstName'))),
-		array('format' => '%s%s', 'parts' => array(array('TYPO3\Faker\Name', 'firstName'), array('TYPO3\Faker\Address', 'citySuffix'))),
-		array('format' => '%s%s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Address', 'citySuffix')))
+		array('format' => '%s %s%s', 'parts' => array(array('KDambekalns\Faker\Address', 'cityPrefix'), array('KDambekalns\Faker\Name', 'firstName'), array('KDambekalns\Faker\Address', 'citySuffix'))),
+		array('format' => '%s %s', 'parts' => array(array('KDambekalns\Faker\Address', 'cityPrefix'), array('KDambekalns\Faker\Name', 'firstName'))),
+		array('format' => '%s%s', 'parts' => array(array('KDambekalns\Faker\Name', 'firstName'), array('KDambekalns\Faker\Address', 'citySuffix'))),
+		array('format' => '%s%s', 'parts' => array(array('KDambekalns\Faker\Name', 'lastName'), array('KDambekalns\Faker\Address', 'citySuffix')))
 	);
 
 	/**
@@ -78,8 +75,8 @@ class Address extends Faker {
 	 * @var array
 	 */
 	static protected $streetNameFormats = array(
-		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Address', 'streetSuffix'))),
-		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name', 'firstName'), array('TYPO3\Faker\Address', 'streetSuffix')))
+		array('format' => '%s %s', 'parts' => array(array('KDambekalns\Faker\Name', 'lastName'), array('KDambekalns\Faker\Address', 'streetSuffix'))),
+		array('format' => '%s %s', 'parts' => array(array('KDambekalns\Faker\Name', 'firstName'), array('KDambekalns\Faker\Address', 'streetSuffix')))
 	);
 
 	/**

@@ -1,15 +1,12 @@
 <?php
-namespace TYPO3\Faker;
+namespace KDambekalns\Faker;
 
 /*                                                                        *
  * This script belongs to the Flow package "Faker".                       *
- *                                                                        *
- * It is free software; you can redistribute it and/or modify it under    *
- * the terms of the GNU Lesser General Public License, either version 3   *
- * of the License, or (at your option) any later version.                 *
- *                                                                        *
- * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
+
+// define aliae for the legacy vendor namespace
+class_alias('KDambekalns\\Faker\\Company', 'TYPO3\\Faker\\Company');
 
 /**
  * Company class for the Faker package
@@ -24,9 +21,9 @@ class Company extends Faker {
 	 * @var array
 	 */
 	static protected $formats = array(
-		array('format' => '%s %s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Company', 'suffix'))),
-		array('format' => '%s-%s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Name', 'lastName'))),
-		array('format' => '%s, %s and %s', 'parts' => array(array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Name', 'lastName'), array('TYPO3\Faker\Name', 'lastName')))
+		array('format' => '%s %s', 'parts' => array(array('KDambekalns\Faker\Name', 'lastName'), array('KDambekalns\Faker\Company', 'suffix'))),
+		array('format' => '%s-%s', 'parts' => array(array('KDambekalns\Faker\Name', 'lastName'), array('KDambekalns\Faker\Name', 'lastName'))),
+		array('format' => '%s, %s and %s', 'parts' => array(array('KDambekalns\Faker\Name', 'lastName'), array('KDambekalns\Faker\Name', 'lastName'), array('KDambekalns\Faker\Name', 'lastName')))
 	);
 
 	/**

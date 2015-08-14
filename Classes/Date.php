@@ -1,15 +1,12 @@
 <?php
-namespace TYPO3\Faker;
+namespace KDambekalns\Faker;
 
 /*                                                                        *
  * This script belongs to the Flow package "Faker".                       *
- *                                                                        *
- * It is free software; you can redistribute it and/or modify it under    *
- * the terms of the GNU Lesser General Public License, either version 3   *
- * of the License, or (at your option) any later version.                 *
- *                                                                        *
- * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
+
+// define aliae for the legacy vendor namespace
+class_alias('KDambekalns\\Faker\\Date', 'TYPO3\\Faker\\Date');
 
 /**
  * Date class for the Faker package

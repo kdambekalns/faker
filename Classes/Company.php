@@ -5,9 +5,6 @@ namespace KDambekalns\Faker;
  * This script belongs to the Flow package "Faker".                       *
  *                                                                        */
 
-// define aliae for the legacy vendor namespace
-class_alias('KDambekalns\\Faker\\Company', 'TYPO3\\Faker\\Company');
-
 /**
  * Company class for the Faker package
  *

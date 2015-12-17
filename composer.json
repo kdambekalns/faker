@@ -3,9 +3,12 @@
   "type": "typo3-flow-package",
   "description": "Faker for PHP, a Flow package.",
   "license": "MIT",
-	"replace": {
-		"typo3/faker": "3.*"
-	},
+  "require": {
+    "typo3/flow": "~2.0||~3.0"
+  },
+  "replace": {
+    "typo3/faker": "3.*"
+  },
   "autoload": {
     "psr-4": {
       "KDambekalns\\Faker\\": "Classes"

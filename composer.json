@@ -1,11 +1,10 @@
 {
   "name": "kdambekalns/faker",
-  "type": "typo3-flow-package",
-  "description": "Faker for PHP, a Flow package.",
+  "description": "Faker for PHP. Inspired by http://faker.rubyforge.org/",
   "license": "MIT",
-	"replace": {
-		"typo3/faker": "3.*"
-	},
+  "replace": {
+    "typo3/faker": "3.*"
+  },
   "autoload": {
     "psr-4": {
       "KDambekalns\\Faker\\": "Classes"

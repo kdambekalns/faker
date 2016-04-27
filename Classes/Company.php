@@ -64,7 +64,7 @@ class Company extends Faker
      */
     public static function name()
     {
-        $format = self::$formats[array_rand(self::$formats)];
+        $format = static::$formats[array_rand(static::$formats)];
 
         $parts = array();
         foreach ($format['parts'] as $function) {
@@ -81,7 +81,7 @@ class Company extends Faker
      */
     protected static function suffix()
     {
-        return self::$suffixes[array_rand(self::$suffixes)];
+        return static::$suffixes[array_rand(static::$suffixes)];
     }
 
     /**
@@ -92,9 +92,9 @@ class Company extends Faker
     public static function catchPhrase()
     {
         return
-            self::$catchPhraseParts[0][array_rand(self::$catchPhraseParts[0])] . ' ' .
-            self::$catchPhraseParts[1][array_rand(self::$catchPhraseParts[1])] . ' ' .
-            self::$catchPhraseParts[2][array_rand(self::$catchPhraseParts[2])];
+            static::$catchPhraseParts[0][array_rand(static::$catchPhraseParts[0])] . ' ' .
+            static::$catchPhraseParts[1][array_rand(static::$catchPhraseParts[1])] . ' ' .
+            static::$catchPhraseParts[2][array_rand(static::$catchPhraseParts[2])];
     }
 
     /**
@@ -105,8 +105,8 @@ class Company extends Faker
     public static function bs()
     {
         return
-            self::$bsParts[0][array_rand(self::$bsParts[0])] . ' ' .
-            self::$bsParts[1][array_rand(self::$bsParts[1])] . ' ' .
-            self::$bsParts[2][array_rand(self::$bsParts[2])];
+            static::$bsParts[0][array_rand(static::$bsParts[0])] . ' ' .
+            static::$bsParts[1][array_rand(static::$bsParts[1])] . ' ' .
+            static::$bsParts[2][array_rand(static::$bsParts[2])];
     }
 }

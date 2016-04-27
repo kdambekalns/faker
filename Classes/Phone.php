@@ -47,8 +47,8 @@ class Phone extends Faker
      */
     public static function number()
     {
-        shuffle(self::$numberFormats);
+        shuffle(static::$numberFormats);
 
-        return self::numerify(current(self::$numberFormats));
+        return static::numerify(current(static::$numberFormats));
     }
 }

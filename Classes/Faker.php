@@ -42,6 +42,6 @@ class Faker
      */
     public static function bothify($string)
     {
-        return self::letterify(self::numerify($string));
+        return static::letterify(static::numerify($string));
     }
 }

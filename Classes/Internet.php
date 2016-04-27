@@ -34,7 +34,7 @@ class Internet extends Faker
      */
     public static function email($name = null)
     {
-        return self::userName($name) . '@' . self::domainName();
+        return static::userName($name) . '@' . static::domainName();
     }
 
     /**
@@ -45,7 +45,7 @@ class Internet extends Faker
      */
     public static function freeEmail($name = null)
     {
-        return self::userName($name) . '@' . self::$freemailerDomains[array_rand(self::$freemailerDomains)];
+        return static::userName($name) . '@' . static::$freemailerDomains[array_rand(static::$freemailerDomains)];
     }
 
     /**
@@ -80,7 +80,7 @@ class Internet extends Faker
      */
     public static function domainName()
     {
-        return self::domainWord() . '.' . self::domainSuffix();
+        return static::domainWord() . '.' . static::domainSuffix();
     }
 
     /**
@@ -103,6 +103,6 @@ class Internet extends Faker
      */
     protected static function domainSuffix()
     {
-        return self::$topLevelDomains[array_rand(self::$topLevelDomains)];
+        return static::$topLevelDomains[array_rand(static::$topLevelDomains)];
     }
 }

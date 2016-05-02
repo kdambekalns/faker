@@ -90,7 +90,7 @@ class Address extends Faker
      */
     public static function zipCode()
     {
-        return self::numerify(self::$zipCodeFormats[array_rand(self::$zipCodeFormats)]);
+        return static::numerify(static::$zipCodeFormats[array_rand(static::$zipCodeFormats)]);
     }
 
     /**
@@ -100,7 +100,7 @@ class Address extends Faker
      */
     public static function usState()
     {
-        return self::$usStates[array_rand(self::$usStates)];
+        return static::$usStates[array_rand(static::$usStates)];
     }
 
     /**
@@ -110,7 +110,7 @@ class Address extends Faker
      */
     public static function usStateCode()
     {
-        return self::$usStateCodes[array_rand(self::$usStateCodes)];
+        return static::$usStateCodes[array_rand(static::$usStateCodes)];
     }
 
     /**
@@ -120,7 +120,7 @@ class Address extends Faker
      */
     protected static function cityPrefix()
     {
-        return self::$cityPrefixes[array_rand(self::$cityPrefixes)];
+        return static::$cityPrefixes[array_rand(static::$cityPrefixes)];
     }
 
     /**
@@ -130,7 +130,7 @@ class Address extends Faker
      */
     protected static function citySuffix()
     {
-        return self::$citySuffixes[array_rand(self::$citySuffixes)];
+        return static::$citySuffixes[array_rand(static::$citySuffixes)];
     }
 
     /**
@@ -140,7 +140,7 @@ class Address extends Faker
      */
     public static function city()
     {
-        $format = self::$cityFormats[array_rand(self::$cityFormats)];
+        $format = static::$cityFormats[array_rand(static::$cityFormats)];
 
         $parts = array();
         foreach ($format['parts'] as $function) {
@@ -157,7 +157,7 @@ class Address extends Faker
      */
     protected static function streetSuffix()
     {
-        return self::$streetSuffixes[array_rand(self::$streetSuffixes)];
+        return static::$streetSuffixes[array_rand(static::$streetSuffixes)];
     }
 
     /**
@@ -167,7 +167,7 @@ class Address extends Faker
      */
     public static function streetName()
     {
-        $format = self::$streetNameFormats[array_rand(self::$streetNameFormats)];
+        $format = static::$streetNameFormats[array_rand(static::$streetNameFormats)];
 
         $parts = array();
         foreach ($format['parts'] as $function) {
@@ -187,9 +187,9 @@ class Address extends Faker
     {
         $formats = array('##### %s', '#### %s', '### %s');
         shuffle($formats);
-        $streetAddress = self::numerify(sprintf(current($formats), self::streetName()));
+        $streetAddress = static::numerify(sprintf(current($formats), static::streetName()));
         if ($withSecondary) {
-            $streetAddress .= ' ' . self::secondaryAddress();
+            $streetAddress .= ' ' . static::secondaryAddress();
         }
 
         return $streetAddress;
@@ -205,7 +205,7 @@ class Address extends Faker
         $format = array('Apt. ###', 'Suite ###');
         shuffle($format);
 
-        return self::numerify(current($format));
+        return static::numerify(current($format));
     }
 
     /**
@@ -215,7 +215,7 @@ class Address extends Faker
      */
     public static function ukCounty()
     {
-        return self::$ukCounties[array_rand(self::$ukCounties)];
+        return static::$ukCounties[array_rand(static::$ukCounties)];
     }
 
     /**
@@ -241,6 +241,6 @@ class Address extends Faker
         $format = array('??# #??', '??## #??');
         shuffle($format);
 
-        return strtoupper(self::bothify(current($format)));
+        return strtoupper(static::bothify(current($format)));
     }
 }

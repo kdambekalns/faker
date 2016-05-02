@@ -20,10 +20,10 @@ class Name extends Faker
     public static function fullName()
     {
         $fullName = '';
-        $format = self::$formats[array_rand(self::$formats)];
+        $format = static::$formats[array_rand(static::$formats)];
 
         foreach ($format as $functionName) {
-            $fullName .= self::$functionName() . ' ';
+            $fullName .= static::$functionName() . ' ';
         }
 
         return trim($fullName);
@@ -36,7 +36,7 @@ class Name extends Faker
      */
     public static function firstName()
     {
-        return self::$firstNames[array_rand(self::$firstNames)];
+        return static::$firstNames[array_rand(static::$firstNames)];
     }
 
     /**
@@ -46,7 +46,7 @@ class Name extends Faker
      */
     public static function lastName()
     {
-        return self::$lastNames[array_rand(self::$lastNames)];
+        return static::$lastNames[array_rand(static::$lastNames)];
     }
 
     /**
@@ -56,7 +56,7 @@ class Name extends Faker
      */
     public static function prefix()
     {
-        return self::$prefixes[array_rand(self::$prefixes)];
+        return static::$prefixes[array_rand(static::$prefixes)];
     }
 
     /**
@@ -66,7 +66,7 @@ class Name extends Faker
      */
     public static function suffix()
     {
-        return self::$suffixes[array_rand(self::$suffixes)];
+        return static::$suffixes[array_rand(static::$suffixes)];
     }
 
     /**

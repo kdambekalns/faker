@@ -28,9 +28,9 @@ class Lorem extends Faker
     public static function words($count = 3)
     {
         if ($count === 1) {
-            return self::$words[array_rand(self::$words, $count)];
+            return static::$words[array_rand(static::$words, $count)];
         } else {
-            return array_intersect_key(self::$words, array_flip(array_rand(self::$words, $count)));
+            return array_intersect_key(static::$words, array_flip(array_rand(static::$words, $count)));
         }
     }
 
@@ -42,7 +42,7 @@ class Lorem extends Faker
      */
     public static function sentence($wordCount = 4)
     {
-        return ucfirst(implode(' ', self::words($wordCount + rand(0, 6)))) . '.';
+        return ucfirst(implode(' ', static::words($wordCount + rand(0, 6)))) . '.';
     }
 
     /**
@@ -55,7 +55,7 @@ class Lorem extends Faker
     {
         $sentences = array();
         for ($i = 0; $i < $count; $i++) {
-            $sentences[] = self::sentence();
+            $sentences[] = static::sentence();
         }
 
         return $sentences;
@@ -69,7 +69,7 @@ class Lorem extends Faker
      */
     public static function paragraph($sentenceCount = 3)
     {
-        return implode(' ', self::sentences($sentenceCount + rand(0, 3)));
+        return implode(' ', static::sentences($sentenceCount + rand(0, 3)));
     }
 
     /**
@@ -82,7 +82,7 @@ class Lorem extends Faker
     {
         $paragraphs = array();
         for ($i = 0; $i < $count; $i++) {
-            $paragraphs[] = self::paragraph();
+            $paragraphs[] = static::paragraph();
         }
 
         return $paragraphs;

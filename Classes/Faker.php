@@ -20,7 +20,7 @@ class Faker
      */
     public static function numerify($string)
     {
-        return preg_replace('/#/e', 'rand(0,9)', $string);
+        return preg_replace_callback('/#/', function() { return rand(0,9); }, $string);
     }
 
     /**
@@ -31,7 +31,7 @@ class Faker
      */
     public static function letterify($string)
     {
-        return preg_replace('/\?/e', 'chr(rand(97,122))', $string);
+        return preg_replace_callback('/\?/', function() { return chr(rand(97,122)); }, $string);
     }
 
     /**
